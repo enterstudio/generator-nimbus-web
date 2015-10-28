@@ -1,5 +1,5 @@
 import yeoman from 'yeoman-generator';
-import {MainGenerator} from '../../_ng/main_generator';
+import {MainGenerator} from '../../_nw/main_generator';
 
 export default class GeneratorNimbusWeb extends yeoman.generators.Base {
   constructor(args, opts, config) {

@@ -18,7 +18,7 @@ var _yeomanGenerator = require('yeoman-generator');
 
 var _yeomanGenerator2 = _interopRequireDefault(_yeomanGenerator);
 
-var _ngMain_generator = require('../../_ng/main_generator');
+var _nwMain_generator = require('../../_nw/main_generator');
 
 var GeneratorNimbusWeb = (function (_yeoman$generators$Base) {
   _inherits(GeneratorNimbusWeb, _yeoman$generators$Base);
@@ -28,7 +28,7 @@ var GeneratorNimbusWeb = (function (_yeoman$generators$Base) {
 
     _get(Object.getPrototypeOf(GeneratorNimbusWeb.prototype), 'constructor', this).call(this, args, opts, config);
 
-    this.wrapper = new _ngMain_generator.MainGenerator(this);
+    this.wrapper = new _nwMain_generator.MainGenerator(this);
   }
 
   _createClass(GeneratorNimbusWeb, [{

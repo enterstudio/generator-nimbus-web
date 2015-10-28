@@ -13,11 +13,9 @@
   "scripts": {
     "test": "npm run compile && mocha --reporter min --require babel/register",
     "compile": "gulp compile",
-    "prepublish": "npm run compile",
-    "pre-commit": [
-      "compile"
-    ]
+    "prepublish": "npm run compile"
   },
+  "pre-commit": ["test"],
   "keywords": [
     "yeoman-generator"
   ],

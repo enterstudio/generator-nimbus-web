@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {MainGenerator} from '../_ng/main_generator';
+import {MainGenerator} from '../_nw/main_generator';
 
 describe('main_generator', () => {
   describe('criação', () => {
