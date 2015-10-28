@@ -6,20 +6,24 @@ export class MainGenerator {
     this.generator = generator;
   }
 
+  saysHello() {
+    this.generator.log(yosay('Bem vindo ao ' + chalk.green('Nimbus') + ' generator!'));
+  }
+
   prompts() {
     const done = this.generator.async();
 
-    this.generator.log(yosay('Welcome to the astounding ' + chalk.red('GeneratorNimbusWeb') + ' generator!'));
-
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'list',
+      name: 'generatorBase',
+      message: 'Qual o generator base?',
+      choices: ["generator-angular", "generator-ng-fullstack"],
+      default: 0
     }];
 
-    this.generator.prompt(prompts, (props) => {
-      this.generator.props = props;
+    this.generator.prompt(prompts, (prop) => {
+      this.generator.generatorBase = prop.generatorBase;
+
       done();
     });
   }

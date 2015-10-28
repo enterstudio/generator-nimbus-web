@@ -26,23 +26,28 @@ var MainGenerator = (function () {
   }
 
   _createClass(MainGenerator, [{
+    key: 'saysHello',
+    value: function saysHello() {
+      this.generator.log((0, _yosay2['default'])('Bem vindo ao ' + _chalk2['default'].green('Nimbus') + ' generator!'));
+    }
+  }, {
     key: 'prompts',
     value: function prompts() {
       var _this = this;
 
       var done = this.generator.async();
 
-      this.generator.log((0, _yosay2['default'])('Welcome to the astounding ' + _chalk2['default'].red('GeneratorNimbusWeb') + ' generator!'));
-
       var prompts = [{
-        type: 'confirm',
-        name: 'someOption',
-        message: 'Would you like to enable this option?',
-        'default': true
+        type: 'list',
+        name: 'generatorBase',
+        message: 'Qual o generator base?',
+        choices: ["generator-angular", "generator-ng-fullstack"],
+        'default': 0
       }];
 
-      this.generator.prompt(prompts, function (props) {
-        _this.generator.props = props;
+      this.generator.prompt(prompts, function (prop) {
+        _this.generator.generatorBase = prop.generatorBase;
+
         done();
       });
     }
