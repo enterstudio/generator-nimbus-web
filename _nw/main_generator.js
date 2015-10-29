@@ -18,6 +18,8 @@ var _yosay = require('yosay');
 
 var _yosay2 = _interopRequireDefault(_yosay);
 
+var _generator_factory = require('./generator_factory');
+
 var MainGenerator = (function () {
   function MainGenerator(generator) {
     _classCallCheck(this, MainGenerator);
@@ -41,7 +43,7 @@ var MainGenerator = (function () {
         type: 'list',
         name: 'generatorBase',
         message: 'Qual o generator base?',
-        choices: ["generator-angular", "generator-ng-fullstack"],
+        choices: [_generator_factory.GeneratorFactory.token.GENERATOR_ANGULAR /*, GeneratorFactory.token.GENERATOR_NG_FULLSTACK*/],
         'default': 0
       }];
 
@@ -54,11 +56,7 @@ var MainGenerator = (function () {
   }, {
     key: 'copies',
     value: function copies() {
-      this.generator.fs.copy(this.generator.templatePath('_package.json'), this.generator.destinationPath('package.json'));
-      this.generator.fs.copy(this.generator.templatePath('_bower.json'), this.generator.destinationPath('bower.json'));
-
-      this.generator.fs.copy(this.generator.templatePath('editorconfig'), this.generator.destinationPath('.editorconfig'));
-      this.generator.fs.copy(this.generator.templatePath('jshintrc'), this.generator.destinationPath('.jshintrc'));
+      _generator_factory.GeneratorFactory.resolveAndCreate(this.generator.generatorBase, this.generator).copyFiles();
     }
   }, {
     key: 'installs',

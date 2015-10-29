@@ -8,7 +8,7 @@ describe('generator-nimbus-web', () => {
     helpers
       .run(path.join(__dirname, '../generators/app'))
       .withOptions({ skipInstall: true })
-      .withPrompts({ algumaFlag: 1 })
+      .withPrompts({ generatorBase: "generator-angular" })
       .on('end', done);
   });
 

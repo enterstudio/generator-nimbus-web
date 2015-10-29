@@ -1,5 +1,6 @@
 import chalk from 'chalk';
 import yosay from 'yosay';
+import {GeneratorFactory} from './generator_factory';
 
 export class MainGenerator {
   constructor(generator) {
@@ -13,11 +14,11 @@ export class MainGenerator {
   prompts() {
     const done = this.generator.async();
 
-    var prompts = [{
+    let prompts = [{
       type: 'list',
       name: 'generatorBase',
       message: 'Qual o generator base?',
-      choices: ["generator-angular", "generator-ng-fullstack"],
+      choices: [GeneratorFactory.token.GENERATOR_ANGULAR/*, GeneratorFactory.token.GENERATOR_NG_FULLSTACK*/],
       default: 0
     }];
 
@@ -29,11 +30,7 @@ export class MainGenerator {
   }
 
   copies() {
-    this.generator.fs.copy(this.generator.templatePath('_package.json'), this.generator.destinationPath('package.json'));
-    this.generator.fs.copy(this.generator.templatePath('_bower.json'), this.generator.destinationPath('bower.json'));
-
-    this.generator.fs.copy(this.generator.templatePath('editorconfig'), this.generator.destinationPath('.editorconfig'));
-    this.generator.fs.copy(this.generator.templatePath('jshintrc'), this.generator.destinationPath('.jshintrc'));
+    GeneratorFactory.resolveAndCreate(this.generator.generatorBase, this.generator).copyFiles();
   }
 
   installs() {
