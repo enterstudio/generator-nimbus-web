@@ -1,7 +1,9 @@
-import {Base} from 'yeoman-generator';
-import {MainGenerator} from '../../_nw/main_generator';
+"use strict";
 
-export default class GeneratorNimbusWeb extends Base {
+const {Base} = require('yeoman-generator');
+const {MainGenerator} = require('../_nw/main_generator');
+
+module.exports = class GeneratorNimbusWeb extends Base {
   constructor(args, opts, config) {
     super(args, opts, config);
 

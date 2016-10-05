@@ -1,11 +1,14 @@
-import chai, {expect} from 'chai';
-import {MainGenerator} from '../_nw/main_generator';
-import sinon from 'sinon';
-import sinonChai from 'sinon-chai';
+"use strict";
+
+const chai = require('chai');
+const {expect} = chai;
+const {MainGenerator} = require('../../_nw/main_generator');
+const sinon = require('sinon');
+const sinonChai = require('sinon-chai');
 
 chai.use(sinonChai);
 
-describe('main_generator', () => {
+describe('unit -> main', () => {
   describe('criação', () => {
     it('deve ter o generator com o que for passado por parâmetro', () => {
       let gen = {a: true};
@@ -31,7 +34,7 @@ describe('main_generator', () => {
   });
 
   describe('prompts', () => {
-
+    
   });
 
   describe('copies', () => {
