@@ -26,6 +26,8 @@
     "chai": "^3.4.0",
     "mocha": "*",
     "sinon": "^1.17.2",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "yeoman-assert": "^2.2.1",
+    "yeoman-test": "^1.5.1"
   }
 }

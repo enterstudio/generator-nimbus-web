@@ -1,8 +1,8 @@
 "use strict";
 
 const path = require('path');
-const {assert} = require('yeoman-generator');
-const {test} = require('yeoman-generator');
+const assert = require('yeoman-assert');
+const test = require('yeoman-test');
 const os = require('os');
 const {create} = require('../_helpers/mock');
 
