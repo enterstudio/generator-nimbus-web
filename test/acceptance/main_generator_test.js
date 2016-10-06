@@ -9,20 +9,13 @@ const {create} = require('../_helpers/mock');
 describe('acceptance -> main', () => {
   before((done) => {
     test.run(path.join(__dirname, '../../app'))
-      .inTmpDir(function(dir) {
-        create({
-          'generator-nimbus-web': {
-            'appName': 'alt.sistema.adminApp123'
-          }
-        }, this.async());
-      })
       .withOptions({ 
         skipInstall: true 
       })
       .withPrompts({ 
         appName: 'alt.sistema.adminApp123' 
       })
-      .on('end', done);
+      .on('end', done);      
   });
 
   it('creates files', () => {

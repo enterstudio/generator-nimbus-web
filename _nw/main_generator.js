@@ -22,11 +22,12 @@ exports.MainGenerator = class MainGenerator {
       default: 'alt.sistema.adminApp'
     }];
 
-    this.generator.prompt(prompts, (prop) => {
-      this.generator.appName = prop.appName;
-
-      done();
-    });    
+    this.generator
+      .prompt(prompts)
+      .then((prop) => {
+        this.generator.appName = prop.appName;
+        done();
+      });    
   }
 
   copies() {
