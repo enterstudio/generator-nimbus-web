@@ -4,7 +4,7 @@ import {base, tasks} from './const';
 
 const JS = [
   base.DIST + '**/*.js', 
-  `!${base.DIST}bower_components/**/*`
+  '!' + base.DIST + 'bower_components/**/*',
 ];
 
 gulp.task(tasks.CLIENT_BUILD_JS_DIST, () => {

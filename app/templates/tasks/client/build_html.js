@@ -5,7 +5,7 @@ import {base, tasks} from './const';
 
 const VIEWS = [
   base.DIST + '**/*.html',
-  '!' + base.DIST + 'bower_components/**/*.html'
+  '!' + base.DIST + 'bower_components/**/*.html',
 ];
 
 gulp.task(tasks.CLIENT_VIEWS_DIST, () => {
