@@ -3,7 +3,7 @@ describe('root -> RootController', function() {
     var NOME_CONTROLLER = 'RootController as ctrl';
     var URL_PING = '/sistema-rest-api/ping';
 
-    beforeEach(module('alt.sistema.adminApp'));
+    beforeEach(module('<%= appName %>'));
 
     beforeEach(inject(function($injector) {
         _rootScope = $injector.get('$rootScope');

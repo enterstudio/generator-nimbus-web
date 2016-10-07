@@ -5,7 +5,7 @@ describe('cabecalho -> CabecalhoController', function () {
     var _SISTEMA_ADMIN_URL_LOGOUT;
     var NOME_CONTROLLER = 'CabecalhoController as ctrl';
 
-    beforeEach(module('alt.sistema.adminApp', function($provide) {
+    beforeEach(module('<%= appName %>', function($provide) {
         $provide.constant('$window', {
             location: {
                 replace: jasmine.createSpy()

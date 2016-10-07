@@ -4,7 +4,7 @@ describe('dashboard -> DashboardService', function() {
   var _rootScope, _scope, _httpBackend, _DashboardService;
   var URL_OBTER_INFO = '/sistema-rest-api/endpoint-qualquer';
 
-  beforeEach(module('alt.sistema.adminApp'));
+  beforeEach(module('<%= appName %>'));
 
   beforeEach(inject(function($injector) {
     _rootScope = $injector.get('$rootScope');

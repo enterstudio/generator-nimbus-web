@@ -6,7 +6,7 @@ describe('app', function() {
   var _sistemaAdminAcessos;
   var _Evento;
 
-  beforeEach(module('alt.sistema.adminApp'));
+  beforeEach(module('<%= appName %>'));
 
   beforeEach(inject(function($injector) {
       _URL_LOGOUT = $injector.get('SISTEMA_ADMIN_URL_LOGOUT');

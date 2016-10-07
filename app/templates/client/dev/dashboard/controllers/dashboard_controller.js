@@ -1,7 +1,7 @@
 ;(function(ng) {
   'use strict';
 
-  ng.module('alt.sistema.adminApp')
+  ng.module('<%= appName %>')
     .controller('DashboardController', [
       '$scope',
       'Evento',

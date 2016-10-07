@@ -1,7 +1,7 @@
 ;(function(ng) {
     "use strict";
     
-    ng.module('alt.sistema.adminApp')
+    ng.module('<%= appName %>')
       .provider('sistemaAdminAcessos', [function() {
           this.acessos = {
               FAZER_ALGO: "999999"

@@ -1,7 +1,7 @@
 ;(function(ng) {
   'use strict';
 
-  ng.module('alt.sistema.adminApp')
+  ng.module('<%= appName %>')
     .constant('BASE_API_SISTEMA_ADMIN', '/sistema-rest-api/privado/admin/')
     .constant('SISTEMA_ADMIN_URL_LOGOUT', altAmbienteUrl.getEndpoint('https://sistema-admin__ambiente__.alterdata.com.br/sistema-rest-api/logout.html'))
     .constant('Evento', {

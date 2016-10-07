@@ -6,7 +6,7 @@ describe('dashboard -> DashboardController', function() {
 
     var NOME_CONTROLLER = 'DashboardController as ctrl';
 
-    beforeEach(module('alt.sistema.adminApp'));
+    beforeEach(module('<%= appName %>'));
 
     beforeEach(inject(function($injector) {
         _rootScope = $injector.get('$rootScope');
