@@ -3,7 +3,6 @@ describe('app', function() {
   var _BASE_API;
   var _lodash;
   var _moment;
-  var _IdentificacaoGraficos;
   var _sistemaAdminAcessos;
   var _Evento;
 
@@ -14,15 +13,14 @@ describe('app', function() {
       _BASE_API = $injector.get('BASE_API_SISTEMA_ADMIN');
       _lodash = $injector.get('_');
       _moment = $injector.get('moment');
-      _IdentificacaoGraficos = $injector.get('IdentificacaoGraficos');
       _sistemaAdminAcessos = $injector.get('sistemaAdminAcessos');
       _Evento = $injector.get('Evento');
   }))   
 
   describe('constantes', function() {
       it('deve ter os valores de Evento.notificacao corretos', function() {
-        expect(_Evento.notificacao.USUARIO_PODE_CONSULTAR_TODOS_ASSINANTES).toEqual('sistema.admin:usuario_pode_consultar_todos_assinantes');
-        expect(_Evento.notificacao.USUARIO_NAO_PODE_CONSULTAR_TODOS_ASSINANTES).toEqual('sistema.admin:usuario_nao_pode_consultar_todos_assinantes');
+        expect(_Evento.notificacao.USUARIO_PODE_FAZER_ALGO).toEqual('sistema.admin:usuario_pode_fazer_algo');
+        expect(_Evento.notificacao.USUARIO_NAO_PODE_FAZER_ALGO).toEqual('sistema.admin:usuario_nao_pode_fazer_algo');
       })
 
       it('deve ter o lodash setado', function() {
@@ -39,10 +37,6 @@ describe('app', function() {
         }
 
         expect(_sistemaAdminAcessos).toEqual(_acessos);
-      })
-      
-      it('deve ter o valor correto para os ids de IdentificacaoGraficos', function() {
-        expect(_IdentificacaoGraficos.ID_BILHETAGEM).toEqual('#grafico-bilhetagem');
       })
 
       it('deve ter o valor correto para BASE_API_SISTEMA', function() {
