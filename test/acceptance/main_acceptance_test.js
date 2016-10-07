@@ -88,6 +88,15 @@ describe('acceptance -> main', () => {
       'client/dev/dashboard/templates/dashboard.html',      
 
       'client/dev/rodape/templates/rodape.tpl.html',
+        
+          
+      'tests/e2e/dashboard.e2e_test.js',
+      
+      'tests/client/app_test.js',
+      'tests/client/cabecalho/controllers/cabecalho_controller_test.js',
+      'tests/client/dashboard/controllers/dashboard_controller_test.js',
+      'tests/client/dashboard/services/dashboard_service_test.js',
+      'tests/client/root/controllers/root_controller_test.js',
       
       
       'tasks/index.js',
@@ -103,15 +112,6 @@ describe('acceptance -> main', () => {
       'tasks/client/deploy.js',
       'tasks/client/test.js',
       'tasks/client/watch.js',
-      
-      
-      'tests/e2e/dashboard.e2e_test.js',
-      
-      'tests/client/app_test.js',
-      'tests/client/cabecalho/controllers/cabecalho_controller_test.js',
-      'tests/client/dashboard/controllers/dashboard_controller_test.js',
-      'tests/client/dashboard/services/dashboard_service_test.js',
-      'tests/client/root/controllers/root_controller_test.js',
     ]);
   });
 });
