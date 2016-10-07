@@ -1,0 +1,16 @@
+{
+  "generator-ng-fullstack": {
+    "appName": "alt.sistema.adminApp",
+    "username": "ericmdantas",
+    "userEmail": "ericdantas0@gmail.com",
+    "stack": "client",
+    "repoHostUrl": "github.com",
+    "userNameSpace": "ericmdantas",
+    "testsSeparated": true,
+    "server": "",
+    "client": "ng1",
+    "stylePreprocessor": "none",
+    "secure": true,
+    "cordova": false
+  }
+}

@@ -4,7 +4,7 @@ const path = require('path');
 const assert = require('yeoman-assert');
 const test = require('yeoman-test');
 const os = require('os');
-const {create} = require('../_helpers/mock');
+const {createYoRc} = require('../_helpers/mock');
 
 describe('acceptance -> main', () => {
   before((done) => {
@@ -13,7 +13,7 @@ describe('acceptance -> main', () => {
         skipInstall: true 
       })
       .withPrompts({ 
-        appName: 'alt.sistema.adminApp123' 
+        appName: 'alt.sistema.adminApp' 
       })
       .on('end', done);      
   });
@@ -22,8 +22,7 @@ describe('acceptance -> main', () => {
     assert.file([
       'bower.json',
       'package.json',
-      '.editorconfig',
-      '.jshintrc'
+      '.editorconfig'
     ]);
   });
 });
