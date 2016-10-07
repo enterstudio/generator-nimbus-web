@@ -56,20 +56,24 @@ exports.MainGenerator = class MainGenerator {
     
     pathsWithOptions(this.generator, [
       {
+        in: 'client/.jazzignore', 
+        out: 'client/.jazzignore',
+      }, 
+      {
         in: 'client/dev/index.html', 
-        out: 'client/dev/index.html'
+        out: 'client/dev/index.html',
       },      
       {
         in: 'client/dev/auth.html',
-        out: 'client/dev/auth.html'
+        out: 'client/dev/auth.html',
       },
       {
         in: 'client/dev/favicon.png',
-        out: 'client/dev/favicon.png'
+        out: 'client/dev/favicon.png',
       },
       {
         in: 'client/dev/app.js',
-        out: 'client/dev/app.js'
+        out: 'client/dev/app.js',
       },
       {
         in: 'client/dev/app.config.js',
@@ -77,11 +81,11 @@ exports.MainGenerator = class MainGenerator {
       },
       {
         in: 'client/dev/app.route.js',
-        out: 'client/dev/app.route.js'
+        out: 'client/dev/app.route.js',
       },
       {
         in: 'client/dev/app.constant.js',
-        out: 'client/dev/app.constant.js'
+        out: 'client/dev/app.constant.js',
       },
       {
         in: 'client/dev/app.acessos.js',
@@ -89,7 +93,7 @@ exports.MainGenerator = class MainGenerator {
       },
       {
         in: 'client/dev/cabecalho/controllers/cabecalho_controller.js',
-        out: 'client/dev/cabecalho/controllers/cabecalho_controller.js'
+        out: 'client/dev/cabecalho/controllers/cabecalho_controller.js',
       },
       {
         in: 'client/dev/cabecalho/templates/cabecalho.tpl.html',
@@ -271,9 +275,6 @@ exports.MainGenerator = class MainGenerator {
       appName: this.generator.appName
     })
 
-    this.generator.directory('client', 'client');
-    this.generator.directory('tests', 'tests');
-    
     this.generator.directory('tasks', 'tasks');
   }
 
