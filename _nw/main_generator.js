@@ -18,12 +18,11 @@ exports.MainGenerator = class MainGenerator {
     let prompts = [{
       type: 'input',
       name: 'appName',
-      message: 'Qual o nome da app?',
+      message: 'Qual o nome do sistema?',
       default: 'alt.sistema.adminApp'
     }];
 
-    this.generator
-      .prompt(prompts)
+    this.generator.prompt(prompts)
       .then((prop) => {
         this.generator.appName = prop.appName;
         done();
@@ -31,10 +30,14 @@ exports.MainGenerator = class MainGenerator {
   }
 
   copies() {
+    this.generator.template('_.yo-rc.json', '.yo-rc.json', {
+      appName: this.generator.appName
+    });
+
     this.generator.template('_package.json', 'package.json');
     this.generator.template('_bower.json', 'bower.json');
-    this.generator.template('editorconfig', '.editorconfig');
-    this.generator.template('jshintrc', '.jshintrc');
+    this.generator.template('_.editorconfig', '.editorconfig');
+    this.generator.directory('client', 'client');
   }
 
   installs() {

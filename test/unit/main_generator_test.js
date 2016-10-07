@@ -12,7 +12,6 @@ describe('unit -> main', () => {
   describe('criação', () => {
     it('deve ter o generator com o que for passado por parâmetro', () => {
       let gen = {a: true};
-
       let main = new MainGenerator(gen);
 
       expect(main.generator).to.equal(gen);
@@ -34,11 +33,32 @@ describe('unit -> main', () => {
   });
 
   describe('prompts', () => {
+    let gen = {
+      async: () => () =>{},
+      prompt: () => Promise.resolve(),      
+    } 
     
+    sinon.spy(gen, 'prompt');
+    
+    let main = new MainGenerator(gen);
+    
+    main.prompts();
+    
+    expect(main.generator.prompt).to.have.been.called;
   });
 
   describe('copies', () => {
+    let gen = {
+      template: sinon.spy(),
+      directory: sinon.spy()
+    };
     
+    let main = new MainGenerator(gen);
+    
+    main.copies();
+    
+    expect(main.generator.template).to.have.been.called;
+    expect(main.generator.directory).to.have.been.called;
   });
 
   describe('installs', () => {
