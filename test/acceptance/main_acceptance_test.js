@@ -13,7 +13,7 @@ describe('acceptance -> main', () => {
         skipInstall: true 
       })
       .withPrompts({ 
-        appName: 'alt.xyz.123' 
+        appName: 'xyz.123' 
       })
       .on('end', done);      
   });
