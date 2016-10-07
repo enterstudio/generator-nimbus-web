@@ -1,6 +1,6 @@
 {
   "generator-ng-fullstack": {
-    "appName": "alt.sistema.adminApp",
+    "appName": "<%= appName %>",
     "username": "ericmdantas",
     "userEmail": "ericdantas0@gmail.com",
     "stack": "client",

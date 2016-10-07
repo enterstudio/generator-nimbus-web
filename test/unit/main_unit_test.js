@@ -2,7 +2,7 @@
 
 const chai = require('chai');
 const {expect} = chai;
-const {MainGenerator} = require('../../_nw/main_generator');
+const {MainGenerator} = require('../../_nw');
 const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 

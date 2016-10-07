@@ -1,8 +1,8 @@
 {
-  "name": "alt.sistema.adminApp",
+  "name": "<%= appName %>",
   "main": "client/dev/app.js",
   "version": "0.0.1",
-  "homepage": "https://github.com/ericmdantas/alt.sistema.adminApp",
+  "homepage": "https://github.com/____/____",
   "authors": [
     "ericmdantas ericdantas0@gmail.com"
   ],
