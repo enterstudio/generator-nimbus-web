@@ -1,5 +1,4 @@
 import gulp from 'gulp';
-import coveralls from 'gulp-coveralls';
 import {Server as Karma} from 'karma';
 import {tasks} from './const';
 

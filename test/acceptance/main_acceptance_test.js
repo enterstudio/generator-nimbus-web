@@ -33,7 +33,9 @@ describe('acceptance -> main', () => {
       'karma.conf.js',
       'protractor.conf.js',
       
+      
       'client/.jazzignore',
+      
 
       'client/dev/index.html',
       'client/dev/auth.html',

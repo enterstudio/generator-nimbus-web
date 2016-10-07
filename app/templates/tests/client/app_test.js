@@ -35,7 +35,7 @@ describe('app', function() {
       
       it('deve ter os acessos setados corretamente', function() {
         var _acessos = {
-          CONSULTAR_TODOS: "355"
+          FAZER_ALGO: "999999"
         }
 
         expect(_sistemaAdminAcessos).toEqual(_acessos);

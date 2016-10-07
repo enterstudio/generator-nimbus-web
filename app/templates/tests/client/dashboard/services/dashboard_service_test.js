@@ -36,15 +36,17 @@ describe('dashboard -> DashboardService', function() {
     });
     
     it('deve buscar a info corretamente', function() {
-      var _resposta = {
+      var _resposta = [
+        {
           "yo": "!"
-      }
+        }
+      ]
 
       _httpBackend.expectGET(URL_OBTER_INFO).respond(200, _resposta);
 
       _DashboardService.obterInfo()
         .then(function(info) {
-          expect(info).toEqual(_resposta);
+          expect(info[0].yo).toEqual(_resposta[0].yo);
         })
         .catch(function(erro) {
           expect(true).toBe(false);
