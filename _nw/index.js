@@ -10,7 +10,7 @@ exports.MainGenerator = class MainGenerator {
   }
 
   saysHello() {
-    this.generator.log(yosay('Bem vindo ao ' + chalk.green('Nimbus-Web') + ' generator!'));
+    this.generator.log(yosay('Bem vindo ao ' + chalk.green('Nimbus Web') + ' Generator!'));
   }
 
   prompts() {
