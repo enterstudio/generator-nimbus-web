@@ -11,67 +11,67 @@ chai.use(sinonChai);
 describe('unit -> main', () => {
   describe('criação', () => {
     it('deve ter o generator com o que for passado por parâmetro', () => {
-      let gen = {a: true};
-      let main = new MainGenerator(gen);
+      let _gen = {a: true};
+      let _main = new MainGenerator(_gen);
 
-      expect(main.generator).to.equal(gen);
+      expect(_main.generator).to.equal(_gen);
     });
   });
 
   describe('saysHello', () => {
     it('deve chamar o log', () => {
-      let stub = {
+      let _gen = {
         log: sinon.spy()
       };
 
-      let main = new MainGenerator(stub);
+      let _main = new MainGenerator(_gen);
 
-      main.saysHello();
+      _main.saysHello();
 
-      expect(main.generator.log).to.have.been.called;
+      expect(_main.generator.log).to.have.been.called;
     });
   });
 
   describe('prompts', () => {
-    let gen = {
+    let _gen = {
       async: () => () =>{},
       prompt: () => Promise.resolve(),      
     } 
     
-    sinon.spy(gen, 'prompt');
+    sinon.spy(_gen, 'prompt');
     
-    let main = new MainGenerator(gen);
+    let _main = new MainGenerator(_gen);
     
-    main.prompts();
+    _main.prompts();
     
-    expect(main.generator.prompt).to.have.been.called;
+    expect(_main.generator.prompt).to.have.been.called;
   });
 
   describe('copies', () => {
-    let gen = {
+    let _gen = {
       template: sinon.spy(),
       directory: sinon.spy()
     };
     
-    let main = new MainGenerator(gen);
+    let _main = new MainGenerator(_gen);
     
-    main.copies();
-    
-    expect(main.generator.template).to.have.been.called;
-    expect(main.generator.directory).to.have.been.called;
+    _main.copies();
+   
+    expect(_main.generator.template).to.have.been.called;
+    expect(_main.generator.directory).to.have.been.called;
   });
 
   describe('installs', () => {
     it('deve chamar o installDependencies', () => {
-      let stub = {
+      let _gen = {
         installDependencies: sinon.spy()
-      };
+      }
 
-      let main = new MainGenerator(stub);
+      let _main = new MainGenerator(_gen);
+      
+      _main.installs();
 
-      main.installs();
-
-      expect(main.generator.installDependencies).to.have.been.called;
+      expect(_main.generator.installDependencies).to.have.been.called;
     });
   });
 });
