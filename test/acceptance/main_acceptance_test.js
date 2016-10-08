@@ -75,7 +75,7 @@ describe('acceptance -> main', () => {
       'client/dev/comum/styles/alt-rodape.css',
       'client/dev/comum/styles/alt-rota.css',
       'client/dev/comum/styles/alt-style.css',
-      'client/dev/comum/styles/alt-tabela.css',
+      'client/dev/comum/styles/alt-tabela-responsiva.css',
       'client/dev/comum/styles/cores_sistema.css',
       'client/dev/comum/styles/dashboard.css',
 

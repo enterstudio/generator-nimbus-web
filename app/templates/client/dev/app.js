@@ -13,6 +13,7 @@
       'alt.passaporte-usuario-logado',
       'alt.passaporte-listagem-produtos',
       'alt.rota-reload',
+      'alt.rotas-listener',
       'alt.passaporte-acessos-usuario',
       'alt.erro-servidor-parser',
       'alt.endpoint-ping'

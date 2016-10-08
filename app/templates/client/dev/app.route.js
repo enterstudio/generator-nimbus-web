@@ -6,13 +6,13 @@
       '$routeProvider',
       function($routeProvider) {
         $routeProvider
-          .when('/', {
+          .when('/dashboard', {
             templateUrl: 'dashboard/templates/dashboard.html',
             controller: 'DashboardController',
             controllerAs: 'dashboardCtrl'
           })
           .otherwise({
-            redirectTo: '/'
+            redirectTo: '/dashboard'
           });
       }
     ]);

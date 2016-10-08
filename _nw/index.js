@@ -208,8 +208,8 @@ exports.MainGenerator = class MainGenerator {
         out: 'client/dev/comum/styles/alt-style.css',
       },
       {
-        in: 'client/dev/comum/styles/alt-tabela.css',
-        out: 'client/dev/comum/styles/alt-tabela.css',
+        in: 'client/dev/comum/styles/alt-tabela-responsiva.css',
+        out: 'client/dev/comum/styles/alt-tabela-responsiva.css',
       },
       {
         in: 'client/dev/comum/styles/cores_sistema.css',

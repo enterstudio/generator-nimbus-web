@@ -44,6 +44,7 @@
     "alt-passaporte-listagem-produtos": "^0.0.7",
     "alt-passaporte-informacoes-autorizacao": "^0.0.4",
     "alt-rota-reload": "^0.0.3",
+    "alt-rotas-listener": "^0.0.3",
     "alt-endpoint-ping": "^0.0.1",
     "alt-ambiente-url": "^0.0.2",
     "n4authenticationinterceptor": "n4-authentication-interceptor#^1.0.0"

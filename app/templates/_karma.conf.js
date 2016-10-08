@@ -25,6 +25,7 @@ module.exports = (config) => {
         'client/dev/bower_components/alt-passaporte-listagem-produtos/dist/alt-passaporte-listagem-produtos.min.js',
         'client/dev/bower_components/alt-passaporte-informacoes-autorizacao/dist/alt-passaporte-informacoes-autorizacao.min.js',
         'client/dev/bower_components/alt-rota-reload/dist/alt-rota-reload.min.js',
+        'client/dev/bower_components/alt-rotas-listener/dist/alt-rotas-listener.min.js',
         'client/dev/bower_components/alt-erro-servidor-parser/dist/alt-erro-servidor-parser.min.js',
         'client/dev/bower_components/alt-endpoint-ping/dist/alt-endpoint-ping.min.js',
         'client/dev/bower_components/n4authenticationinterceptor/dist/n4authenticationinterceptor.min.js',

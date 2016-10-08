@@ -24,4 +24,18 @@
         n4AuthenticationInterceptorProvider.redirectURL = URL_PASSAPORTE_AUTH + 
                                                           altAmbienteUrl.getEndpoint('?continue=https://sistema-admin__ambiente__.alterdata.com.br/auth.html&nomeProduto=Sistema%20Admin&idProduto=CHAVE_PRODUTO');
     }])
+    .config([
+      'AltRotasProvider',
+      'sistemaAdminAcessosProvider',
+      function(rotasProvider, sistemaAdminAcessosProvider) {
+        
+        rotasProvider.rotas = [
+          {
+            nome: 'Dashboard',
+            url: '/dashboard',
+            active: false,
+            idAcesso: sistemaAdminAcessosProvider.FAZER_ALGO
+          }
+        ]
+    }]);
 }(window.angular));

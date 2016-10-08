@@ -78,7 +78,26 @@
     </div>
 
     <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#js-menu-cabecalho">
+            <span class="sr-only">...</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
         <a class="navbar-brand" href="/">Sistema - Admin</a>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="js-menu-cabecalho">
+        <ul class="nav navbar-nav" 
+            ng-controller="AltRotasController as arCtrl">
+            
+              <li ng-repeat="rota in arCtrl.rotas" ng-class="{active: rota.active}">
+                  <a ng-href="{{::rota.url}}" 
+                    ng-bind="::rota.nome"></a>
+              </li>
+              
+        </ul>
     </div>
 
   </div>
