@@ -1,7 +1,7 @@
 ;(function(ng) {
   'use strict';
   
-  var URL_PASSAPORTE_AUTH = altAmbienteUrl.getEndpoint('https://passaporte2__ambiente__.alterdata.com.br');
+  const URL_PASSAPORTE_AUTH = altAmbienteUrl.getEndpoint('https://passaporte2__ambiente__.alterdata.com.br');
 
   ng.module('<%= appName %>')
     .config([

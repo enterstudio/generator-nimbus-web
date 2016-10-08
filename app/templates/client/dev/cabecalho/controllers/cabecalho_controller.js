@@ -26,7 +26,7 @@
                       this.produtos = produtos;
                   })
                   .catch((erro) => {
-                      var MSG_DEFAULT = 'Houve um erro ao recuperar a listagem de produtos';
+                      const MSG_DEFAULT = 'Houve um erro ao recuperar a listagem de produtos';
                       AltAlertaFlutuanteService.exibe({msg : altSanitizeMensagemErroBackend(erro, MSG_DEFAULT)});
                   });
           };

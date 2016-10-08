@@ -5,13 +5,13 @@
     .factory('DashboardResource', [
       '$resource',
         function($resource) {
-          var _url = '/sistema-rest-api/endpoint-qualquer';
+          const _url = '/sistema-rest-api/endpoint-qualquer';
 
-          var _params = {
+          const _params = {
 
           };
           
-          var _methods = {
+          const _methods = {
             obterInfo: {
               method: 'GET',
               isArray: true
