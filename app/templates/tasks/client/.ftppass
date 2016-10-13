@@ -1,3 +1,4 @@
 {
-	"key": "usuario:password"
+	"user": "user",
+	"password": "pass"
 }

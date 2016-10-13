@@ -1,14 +1,27 @@
 import gulp from 'gulp';
-import sftp from 'gulp-sftp';
+import ftp from 'vinyl-ftp';
 import {base, tasks} from './const';
+import fs from 'fs';
 
 gulp.task(tasks.CLIENT_DEPLOY__PRIVATE, () => {
-   return gulp.src(base.DIST)
-               .pipe(sftp({
-                    host: 'host-addr',
+   const ARQUIVOS = base.DIST + '**/*';
+   
+   const _auth = JSON.parse(fs.readFileSync(__dirname + '/.ftppass').toString());
+   const _conn = ftp.create({
+                    host: '10.0.0.112',
                     port: 22,
-                    auth: 'key',
-                    removePlatform: 'unix',
-                    remotePath: '/var/www/sistema-admin/'
-                }));
+                    user: _auth.user,
+                    password: _auth.password,
+                    parallel: 10,
+                    log: console.log
+                });
+	
+   return gulp.src(ARQUIVOS)
+              .pipe(_conn.dest('/var/www/sistema-admin'))
+              .on('error', (err) => {
+                console.log(err);
+              })
+              .on('end', () => {
+                console.log('uploaded');
+              });
 });
