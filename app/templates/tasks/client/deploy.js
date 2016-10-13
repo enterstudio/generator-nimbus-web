@@ -8,7 +8,7 @@ gulp.task(tasks.CLIENT_DEPLOY__PRIVATE, () => {
    
    const _auth = JSON.parse(fs.readFileSync(__dirname + '/.ftppass').toString());
    const _conn = ftp.create({
-                    host: '10.0.0.112',
+                    host: '10.10.10.10',
                     port: 22,
                     user: _auth.user,
                     password: _auth.password,
