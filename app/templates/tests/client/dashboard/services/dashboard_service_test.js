@@ -21,7 +21,7 @@ describe('dashboard -> DashboardService', function() {
   })
 
   describe('obterInfo', function() {
-    it('deve tentar buscar a bilhetagem, mas endpoint retorna erro', function() {
+    it('deve tentar buscar as informações, mas endpoint retorna erro', function() {
       _httpBackend.expectGET(URL_OBTER_INFO).respond(400, {});
 
       _DashboardService.obterInfo()

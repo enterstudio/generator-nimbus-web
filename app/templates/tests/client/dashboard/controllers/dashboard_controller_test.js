@@ -1,8 +1,8 @@
 'use strict';
 
 describe('dashboard -> DashboardController', function() {
-    var _rootScope, _q, _moment, _scope, _httpBackend, _Evento, _DashboardService, _BilhetagemGraficoService, _AltAlertaFlutuanteService, _AltCarregandoInfoService,
-        _PeriodoBilhetagem, _AltSelectService, _AltPassaporteUsuarioLogadoManager;
+    var _rootScope, _q, _moment, _scope, _httpBackend, _Evento, _DashboardService, _AltAlertaFlutuanteService, _AltCarregandoInfoService,
+        _AltSelectService, _AltPassaporteUsuarioLogadoManager;
 
     var NOME_CONTROLLER = 'DashboardController as ctrl';
 
