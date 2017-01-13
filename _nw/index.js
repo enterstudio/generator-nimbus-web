@@ -27,10 +27,10 @@ exports.MainGenerator = class MainGenerator {
       .then((prop) => {
         this.generator.appName = prop.appName;
         done();
-      });    
+      });
   }
 
-  copies() {    
+  copies() {
     this.generator.template('_.alivrc', '.alivrc');
     this.generator.template('_.babelrc', '.babelrc');
     this.generator.template('_.bowerrc', '.bowerrc');
@@ -42,9 +42,9 @@ exports.MainGenerator = class MainGenerator {
     });
 
     this.generator.template('_package.json', 'package.json', {
-      appName: this.generator.appName  
+      appName: this.generator.appName
     });
-    
+
     this.generator.template('_bower.json', 'bower.json', {
       appName: this.generator.appName
     });
@@ -53,16 +53,12 @@ exports.MainGenerator = class MainGenerator {
     this.generator.template('_gulpfile.babel.js', 'gulpfile.babel.js');
     this.generator.template('_karma.conf.js', 'karma.conf.js');
     this.generator.template('_protractor.conf.js', 'protractor.conf.js');
-    
+
     pathsWithOptions(this.generator, [
       {
-        in: 'client/.jazzignore', 
-        out: 'client/.jazzignore',
-      }, 
-      {
-        in: 'client/dev/index.html', 
+        in: 'client/dev/index.html',
         out: 'client/dev/index.html',
-      },      
+      },
       {
         in: 'client/dev/auth.html',
         out: 'client/dev/auth.html',
@@ -102,7 +98,7 @@ exports.MainGenerator = class MainGenerator {
       {
         in: 'client/dev/comum/images/logo_branco.png',
         out: 'client/dev/comum/images/logo_branco.png',
-      }, 
+      },
       {
         in: 'client/dev/comum/styles/alt-aba.css',
         out: 'client/dev/comum/styles/alt-aba.css',
@@ -151,7 +147,7 @@ exports.MainGenerator = class MainGenerator {
         in: 'client/dev/comum/styles/alt-carregando-info.css',
         out: 'client/dev/comum/styles/alt-carregando-info.css',
       },
-      {        
+      {
         in: 'client/dev/comum/styles/alt-data.css',
         out: 'client/dev/comum/styles/alt-data.css',
       },
@@ -190,10 +186,10 @@ exports.MainGenerator = class MainGenerator {
       {
         in: 'client/dev/comum/styles/alt-position.css',
         out: 'client/dev/comum/styles/alt-position.css',
-      }, 
+      },
       {
         in: 'client/dev/comum/styles/alt-produtos-usuario-cabecalho.css',
-        out: 'client/dev/comum/styles/alt-produtos-usuario-cabecalho.css',        
+        out: 'client/dev/comum/styles/alt-produtos-usuario-cabecalho.css',
       },
       {
         in: 'client/dev/comum/styles/alt-rodape.css',
@@ -240,8 +236,8 @@ exports.MainGenerator = class MainGenerator {
         out: 'client/dev/dashboard/styles/dashboard.css',
       },
       {
-        in: 'client/dev/dashboard/templates/dashboard.html',      
-        out: 'client/dev/dashboard/templates/dashboard.html',     
+        in: 'client/dev/dashboard/templates/dashboard.html',
+        out: 'client/dev/dashboard/templates/dashboard.html',
       },
       {
         in: 'client/dev/rodape/templates/rodape.tpl.html',

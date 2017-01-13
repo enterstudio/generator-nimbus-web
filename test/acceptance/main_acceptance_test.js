@@ -9,13 +9,13 @@ const {createYoRc} = require('../_helpers/mock');
 describe('acceptance -> main', () => {
   before((done) => {
     test.run(path.join(__dirname, '../../app'))
-      .withOptions({ 
-        skipInstall: true 
+      .withOptions({
+        skipInstall: true
       })
-      .withPrompts({ 
-        appName: 'xyz.123' 
+      .withPrompts({
+        appName: 'xyz.123'
       })
-      .on('end', done);      
+      .on('end', done);
   });
 
   it('arquivos criados', () => {
@@ -25,31 +25,28 @@ describe('acceptance -> main', () => {
       '.bowerrc',
       '.jazzignore',
       '.yo-rc.json',
-      '.editorconfig',      
+      '.editorconfig',
       'package.json',
-      'bower.json',      
+      'bower.json',
       'fake-server.js',
       'gulpfile.babel.js',
       'karma.conf.js',
       'protractor.conf.js',
-      
-      
-      'client/.jazzignore',
-      
+
 
       'client/dev/index.html',
       'client/dev/auth.html',
       'client/dev/favicon.png',
-      
+
       'client/dev/app.js',
       'client/dev/app.config.js',
       'client/dev/app.route.js',
       'client/dev/app.constant.js',
       'client/dev/app.acessos.js',
-      
+
       'client/dev/cabecalho/controllers/cabecalho_controller.js',
       'client/dev/cabecalho/templates/cabecalho.tpl.html',
-      
+
       'client/dev/comum/images/logo_branco.png',
       'client/dev/comum/styles/alt-aba.css',
       'client/dev/comum/styles/alt-alerta-flutuante.css',
@@ -80,25 +77,25 @@ describe('acceptance -> main', () => {
       'client/dev/comum/styles/dashboard.css',
 
       'client/dev/root/controllers/root_controller.js',
-      
+
       'client/dev/dashboard/controllers/dashboard_controller.js',
       'client/dev/dashboard/resources/dashboard_resource.js',
       'client/dev/dashboard/services/dashboard_service.js',
       'client/dev/dashboard/styles/dashboard.css',
-      'client/dev/dashboard/templates/dashboard.html',      
+      'client/dev/dashboard/templates/dashboard.html',
 
       'client/dev/rodape/templates/rodape.tpl.html',
-        
-          
+
+
       'tests/e2e/dashboard.e2e_test.js',
-      
+
       'tests/client/app_test.js',
       'tests/client/cabecalho/controllers/cabecalho_controller_test.js',
       'tests/client/dashboard/controllers/dashboard_controller_test.js',
       'tests/client/dashboard/services/dashboard_service_test.js',
       'tests/client/root/controllers/root_controller_test.js',
-      
-      
+
+
       'tasks/index.js',
       'tasks/client/.ftppass',
       'tasks/client/index.js',

@@ -1,12 +1,12 @@
-core.ignore.recursive= 
-
-core.ignore= \
+core.ignore.recursive = \
 	{*.log} \
 	{*.log.*} \
+	{bower_components} \
+	{node_modules} \
+
+core.ignore= \
 	{.idea} \
 	{.tmp} \
-	{bower_components} \
 	{dist} \
-	{jsconfig.json} \
 	{node_modules} \
-	{unit_coverage} 
+	{unit_coverage}
