@@ -18,8 +18,8 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "chalk": "^1.0.0",
-    "yeoman-generator": "^0.24.1",
+    "chalk": "^2.0.0",
+    "yeoman-generator": "^2.0.0",
     "yosay": "^1.0.2"
   },
   "devDependencies": {
